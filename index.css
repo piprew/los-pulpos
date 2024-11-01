@@ -1,5 +1,8 @@
 @import url('https://cdn.jsdelivr.net/npm/@fontsource-variable/grandstander/index.css');
 
+html, *{
+  overflow: hidden;
+}
 
 body {
   font-family: 'Grandstander Variable', system-ui;
