@@ -248,7 +248,8 @@ h1 {
   }
 
   .boton {
-      width: 80%; /* Botones ocupan el 80% del ancho en pantallas más pequeñas */
+      width: 40%; /* Botones ocupan el 80% del ancho en pantallas más pequeñas */
+      height: 30px;
   }
 
   .boton a {
