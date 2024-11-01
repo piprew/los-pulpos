@@ -205,18 +205,58 @@ h1 {
   }
 }
 
-/* Estilos para dispositivos con un ancho máximo de 480px (móviles) */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Ajustar tamaño de fuente general */
+  }
+
+  h1 {
+      font-size: 30px; /* Hacer el título más pequeño */
+      text-align: center; /* Centrar el título */
+      margin-bottom: 10px; /* Espacio debajo del título */
+  }
+
+  .contenedor {
+      flex-direction: column; /* Cambiar a columna para móviles */
+      align-items: center; /* Centrar elementos en la columna */
+  }
+
+  img {
+      width: 80%; /* Hacer la imagen más pequeña y responsiva */
+      max-width: 250px; /* Establecer un ancho máximo */
+      margin-top: 10px; /* Espacio encima de la imagen */
+  }
+
+  .boton {
+      width: 70%; /* Botones ocupan el 70% del ancho en móviles */
+      margin: 10px 0; /* Espaciado entre botones */
+      font-size: 14px; /* Tamaño de fuente más pequeño para botones */
+  }
+
+  .boton a {
+      padding: 8px; /* Ajustar el padding de los enlaces en botones */
+  }
+}
+
 @media (max-width: 480px) {
   body {
       font-size: 12px; /* Ajustar aún más el tamaño de la fuente */
   }
 
   h1 {
-      font-size: 30px; /* Tamaño de fuente más pequeño para el título */
+      font-size: 24px; /* Hacer el título más pequeño para pantallas más pequeñas */
+  }
+
+  .boton {
+      width: 80%; /* Botones ocupan el 80% del ancho en pantallas más pequeñas */
   }
 
   .boton a {
-      font-size: 14px; /* Ajustar el tamaño de fuente de los botones */
-      padding: 10px; /* Ajustar el padding */
+      font-size: 12px; /* Tamaño de fuente aún más pequeño para botones */
+      padding: 6px; /* Ajustar el padding para botones en pantallas más pequeñas */
+  }
+
+  img {
+      max-width: 200px; /* Ajustar el tamaño máximo de la imagen */
   }
 }
