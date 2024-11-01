@@ -177,3 +177,46 @@ h1 {
   background: #2bd2ff;
   box-shadow: 0 0 5px #2bd2ff, 0 0 15px #2bd2ff, 0 0 30px #2bd2ff, 0 0 60px #2bd2ff;
 }
+
+/* Estilos para dispositivos con un ancho máximo de 768px (tabletas y móviles) */
+@media (max-width: 768px) {
+  body {
+      font-size: 14px; /* Ajustar el tamaño de la fuente */
+  }
+
+  h1 {
+      font-size: 40px; /* Tamaño de fuente más pequeño para el título */
+  }
+
+  .contenedor {
+      flex-direction: column; /* Cambiar a columna para mejor visualización */
+      align-items: center; /* Centrar elementos */
+  }
+
+  img {
+      width: 100%; /* Hacer la imagen más pequeña y responsiva */
+      max-width: 300px; /* Establecer un ancho máximo */
+      margin: 0; /* Eliminar margen a la izquierda */
+  }
+
+  .boton {
+      width: 100%; /* Botones ocupan el 100% del ancho en móviles */
+      margin: 10px 0; /* Espaciado entre botones */
+  }
+}
+
+/* Estilos para dispositivos con un ancho máximo de 480px (móviles) */
+@media (max-width: 480px) {
+  body {
+      font-size: 12px; /* Ajustar aún más el tamaño de la fuente */
+  }
+
+  h1 {
+      font-size: 30px; /* Tamaño de fuente más pequeño para el título */
+  }
+
+  .boton a {
+      font-size: 14px; /* Ajustar el tamaño de fuente de los botones */
+      padding: 10px; /* Ajustar el padding */
+  }
+}
