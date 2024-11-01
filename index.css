@@ -1,0 +1,232 @@
+@import url('https://cdn.jsdelivr.net/npm/@fontsource-variable/grandstander/index.css');
+
+
+body {
+  font-family: 'Grandstander Variable', system-ui;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  overflow: hidden;
+}
+
+.contenedor {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    padding: 20px;
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+img {
+    display: flex;
+    float: right;
+    margin-left: 10px;
+    animation: zoom 2s ease-in-out infinite;
+}
+
+
+img:hover {
+    animation-play-state: paused;
+}
+
+
+h1 {
+    font-size: 80px;
+  font-family: 'Grandstander Variable', system-ui;
+  color: white
+}
+
+.lah{
+    color:orange
+}
+
+.lluvia {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.estrella-fugaz {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background-color: white;
+    animation: caida 2s linear infinite;
+    opacity: 0;
+}
+
+@keyframes caida {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+.container .boton{
+    position: relative;
+    width: 155px;
+    height:50px;
+    margin:20px;
+}
+
+.container .boton a{
+    position: absolute;
+    top:0;
+    left:0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 30px;
+    color:rgb(255, 255, 255);
+    z-index: 1;
+    font-weight: 400;
+    Letter-spacing: 1px;
+    text-decoration: none;
+    overflow:hidden;
+    transition: 0.5s;
+    backdrop-filter: blur(15px)
+}
+
+.container .boton:hover a{
+    color:white;
+    Letter-spacing: 3px;
+}
+
+.container .boton a::before{
+    content:"";
+    position: absolute;
+    top:0;
+    left:0;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.15),
+    transparent);
+    transform: skewX(45deg) translateX(0%);
+    transition: 0.5s;
+}
+
+.container .boton:hover a::before{
+    transform: skewX(45deg) translateX(200%);
+}
+
+.container .boton::before{
+    content:"";
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background: #2bd2ff;
+    border-radius: 10px;
+    bottom:-5px;
+    transition: 0.5s;
+    transition-delay: 0s; 
+}
+
+.container .boton:hover::before{
+    height:50%;
+    width: 80%;
+    bottom:0;
+    border-radius:30px;
+    transition-delay: 0.5s;
+}
+
+.container .boton::after{
+    content:"";
+    position: absolute;
+    left:50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 10px;
+    background: #2bd2ff;
+    border-radius: 10px;
+    top:-5px;
+    transition: 0.5s;
+    transition-delay: 0s; 
+}
+
+.container .boton:hover::after{
+    height:50%;
+    width: 80%;
+    top:0;
+    border-radius:30px;
+    transition-delay: 0.5s;
+}
+
+@media (max-width: 576px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .container .boton {
+    width: 120px; 
+    height: 40px;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+@media (min-width: 577px) and (max-width: 768px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  .container .boton {
+    width: 140px; 
+    height: 45px; 
+  }
+
+  img {
+    width: 90%;
+    height: auto; 
+  }
+}
+
+@media (min-width: 769px) and (max-width: 992px) {
+  h1 {
+    font-size: 70px; 
+  }
+
+  .container .boton {
+    width: 150px;
+    height: 50px; 
+  }
+
+  img {
+    width: 95%; 
+    height: auto; 
+  }
+}
+
+@media (min-width: 993px) {
+  img {
+    width: 409px; 
+    height: 577px; 
+  }
+}
